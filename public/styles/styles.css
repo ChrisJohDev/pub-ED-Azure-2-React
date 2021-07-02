@@ -1,0 +1,54 @@
+/* This section containing .page_container, .page_wrap, and footer together with the html
+makes it possible to position the footer at the bottom of the screen or after page content. 
+Items marked as "important to footer placement" below are essential to make this work.*/
+body {
+    margin: 0px;
+    background-color: yellow;
+    height: 100vh;
+    width: 100vw;
+}
+
+.page_wrapper {
+    /*important to footer placement*/
+    position: relative;
+    top: 0px;
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+
+}
+
+.page_container_wrapper {
+    padding-bottom: 40px;
+    /*border: 4px solid red;*/
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    /*important to footer placement*/
+    bottom: 0px;
+    /*important to footer placement*/
+    background-color: transparent;
+    height: 60px;
+    /*important to footer placement*/
+    width: 100vw;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    grid-auto-rows: minmax(1em, auto);
+    border: 3px solid blue;
+    margin-bottom: 1.5em;
+    padding: 0.5em
+}
+
+.column3 {
+    grid-row: span 2;
+}
